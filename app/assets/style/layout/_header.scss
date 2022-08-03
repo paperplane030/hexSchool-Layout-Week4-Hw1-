@@ -1,0 +1,128 @@
+.header {
+  height: 80px;
+  background-color: $primary;
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    .logo {
+      img {
+        max-width: 80px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .nav-block {
+      display: flex;
+      align-items: center;
+      gap: 64px;
+      height: 100%;
+      .nav-link {
+        display: block;
+        padding: 25px 0px;
+        font-size: 20px;
+        line-height: 30px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+          text-shadow: 2px 2px $main-text;
+        }
+      }
+    }
+  }
+}
+.product-menu {
+  border-bottom: 1px solid #dcdcdc;
+  background-color: white;
+  display: none;
+  .container {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    .product-item {
+      flex: 1 1 33%;
+      border-left: 1px solid #dcdcdc;
+      border-right: 1px solid #dcdcdc;
+      .link {
+        display: block;
+        padding: 24px 0px 16px;
+        color: black;
+        text-align: center;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 1.5;
+        border-bottom: 8px solid white;
+        &:hover,
+        &.active {
+          border-bottom: 8px solid $primary;
+        }
+      }
+    }
+  }
+  &.show {
+    display: block;
+  }
+}
+@include tablet() {
+  .product-menu {
+    .container {
+      .product-item {
+        .link {
+          padding: 16px 0px 8px;
+          font-size: 24px;
+          &:hover,
+          &.active {
+            border-bottom: 8px solid $primary;
+          }
+        }
+      }
+    }
+  }
+}
+@include mobile() {
+  .header {
+    height: auto;
+    .container {
+      padding: 0px;
+      &.top-header {
+        flex-wrap: wrap;
+        justify-content: center;
+        .logo {
+          padding: 12px 0px;
+          text-align: center;
+        }
+        .nav-block {
+          flex-wrap: wrap;
+          gap: 0;
+          width: 100%;
+          height: auto;
+          .nav-link {
+            width: 50%;
+            padding: 12px 0px;
+            border: 1px solid white;
+            text-align: center;
+            font-size: 16px;
+            line-height: 24px;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              transform: none;
+              text-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .product-menu {
+    .container {
+      .product-item {
+        .link {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
