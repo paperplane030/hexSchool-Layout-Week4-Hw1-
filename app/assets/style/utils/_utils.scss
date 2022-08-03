@@ -1,5 +1,5 @@
 .container {
-  max-width: 1296px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0px 12px;
   @include tablet() {
@@ -11,16 +11,17 @@
   }
 }
 
+@mixin baseFont($base: 16px) {
+  font-size: $base;
+  line-height: 1.5;
+}
+
 .font-roboto {
   font-family: 'Roboto', sans-serif;
 }
 
 .text-white {
   color: white !important;
-}
-
-.row {
-  display: flex;
 }
 
 .hover-translateY {

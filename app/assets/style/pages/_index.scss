@@ -17,19 +17,16 @@
         margin-bottom: 4px;
         text-align: right;
         color: $main-text;
-        font-size: 36px;
-        line-height: 1.5;
+        @include baseFont(36px);
         .bigger {
-          font-size: 64px;
+          @include baseFont(64px);
           font-weight: bold;
         }
       }
       .btn {
         padding: 6px 12px;
-        color: white;
         background-color: $primary;
-        font-size: 20px;
-        line-height: 1.5;
+        @include baseFont(20px);
       }
     }
   }
@@ -51,13 +48,11 @@
           margin-bottom: 8px;
           text-align: center;
           color: $main-text;
-          font-size: 24px;
+          @include baseFont(24px);
           font-weight: bold;
-          line-height: 1.5;
         }
         .info-des {
-          font-size: 16px;
-          line-height: 1.5;
+          @include baseFont();
         }
       }
     }
@@ -75,9 +70,8 @@
         .classic-title {
           color: $primary;
           text-align: center;
-          font-size: 48px;
+          @include baseFont(48px);
           font-style: italic;
-          line-height: 1.5;
         }
       }
     }
@@ -104,9 +98,8 @@
           background-color: white;
           color: $primary;
           text-align: center;
-          font-size: 48px;
+          @include baseFont(48px);
           font-style: italic;
-          line-height: 1.5;
         }
         &:first-of-type {
           .co-brand-title {
@@ -129,19 +122,16 @@
           padding: 16px;
           .recommend-name {
             margin-bottom: 8px;
-            font-size: 16px;
-            line-height: 1.5;
+            @include baseFont();
             font-weight: 500;
           }
           .recommend-des {
             margin-bottom: 48px;
-            font-size: 16px;
-            line-height: 1.5;
+            @include baseFont();
             min-height: 4em;
           }
           .recommend-date {
-            font-size: 14px;
-            line-height: 1.5;
+            @include baseFont(14px);
             color: #707070;
           }
         }
@@ -156,8 +146,7 @@
         margin-top: 48px;
         .contact-info {
           margin-bottom: 24px;
-          font-size: 20px;
-          line-height: 1.5;
+          @include baseFont(20px);
         }
         .contact-form {
           .input-item {
@@ -165,8 +154,7 @@
             .label-block {
               display: block;
               margin-bottom: 8px;
-              font-size: 16px;
-              line-height: 1.5;
+              @include baseFont();
             }
             input[type='text'],
             textarea {
@@ -177,8 +165,7 @@
               background-color: $second;
             }
             .term-label {
-              font-size: 16px;
-              line-height: 1.5;
+              @include baseFont();
             }
             input[type='checkbox'] {
               border: 2px solid black;
@@ -192,10 +179,8 @@
             padding: 16px 176px;
             margin: 0 auto;
             background-color: $primary;
-            color: white;
             border: none;
-            font-size: 16px;
-            line-height: 1.5;
+            @include baseFont();
             font-weight: bold;
             cursor: pointer;
           }
@@ -251,7 +236,7 @@
       .container {
         .contact-block {
           .contact-info {
-            font-size: 16px;
+            @include baseFont();
           }
           .contact-form {
             .submit-btn {
@@ -270,9 +255,9 @@
       .container {
         padding: 0px 37px;
         h1 {
-          font-size: 16px;
+          @include baseFont();
           .bigger {
-            font-size: 24px;
+            @include baseFont(24px);
           }
         }
       }
@@ -321,9 +306,8 @@
   padding: 80px 0px;
   .section-title {
     color: $main-text;
-    font-size: 48px;
+    @include baseFont(48);
     font-weight: bold;
-    line-height: 1.5;
     text-align: center;
   }
 }
@@ -331,7 +315,7 @@
   .section {
     padding: 40px 0px;
     .section-title {
-      font-size: 24px;
+      @include baseFont(24px);
     }
   }
 }
