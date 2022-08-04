@@ -306,7 +306,7 @@
   padding: 80px 0px;
   .section-title {
     color: $main-text;
-    @include baseFont(48);
+    @include baseFont(48px);
     font-weight: bold;
     text-align: center;
   }
